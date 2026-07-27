@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Oluwafunsho Osoba's education, certifications, technical skills, and career goals in technology.">
     <title>Oluwafunsho Osoba | About Me</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -9,6 +11,7 @@
 <body>
     <header>
         <h1>About Me</h1>
+        <p>A little more about who I am and where I'm headed.</p>
     </header>
 
     <nav>
@@ -20,7 +23,7 @@
 
     <!-- Light / Dark mode toggle button -->
     <div class="mode-bar">
-        <button id="modeToggleBtn">Switch to Dark Mode</button>
+        <button id="modeToggleBtn" aria-pressed="false">Switch to Dark Mode</button>
     </div>
 
     <main>
@@ -34,7 +37,7 @@
 
         <section>
             <h2>Education</h2>
-            <img src="Profileimage.jpeg" alt="Profile image of Oluwafunsho Osoba" width="250">
+            <img src="Profileimage.jpeg" alt="Profile photo of Oluwafunsho Osoba" width="250">
             <p>
                 I am currently pursuing a Bachelor of Science in Management Information Systems (MIS) at SUNY Old Westbury.
                 Throughout my studies, I have gained knowledge in web development, databases, networking,
@@ -47,10 +50,12 @@
                 <li>CompTIA Security+ Certified</li>
                 <li>Commercial Driver's License (CDL) Class A</li>
             </ul>
+
+            <p><a href="funshoIT.docx">Download My Resume</a></p>
         </section>
 
         <section>
-            <h3>Technical Skills</h3>
+            <h2>Technical Skills</h2>
             <ul>
                 <li>HTML</li>
                 <li>CSS</li>
@@ -64,7 +69,7 @@
         </section>
 
         <section>
-            <h3>Career Goals</h3>
+            <h2>Career Goals</h2>
             <p>My interests center around technology, innovation, and continuous
                 learning. I am particularly interested in software development,
                 cybersecurity, artificial intelligence, cloud technologies, and
@@ -77,16 +82,16 @@
     <p id="datetime" class="datetime-display"></p>
 
     <footer>
-        <h2>Contact Information</h2>
-        <p><strong>Email:</strong> funsho.osba@gmail.com</p>
-        <p><strong>Phone:</strong> (516) 707-8318</p>
-        <hr>
+        <p>
+            <a href="https://github.com/Oosoba1" target="_blank">GitHub</a> |
+            <a href="https://www.linkedin.com/in/oluwafunshoosoba" target="_blank">LinkedIn</a> |
+            <a href="mailto:funsho.osba@gmail.com">Email Me</a>
+        </p>
         <p>&copy; 2026 Oluwafunsho Osoba. All rights reserved.</p>
-        <a href="funshoIT.docx">Resume</a>
     </footer>
 
     <!-- Back to Top button -->
-    <button id="backToTopBtn" title="Back to Top">&#8679;</button>
+    <button id="backToTopBtn" aria-label="Back to top" title="Back to Top">&#8679;</button>
 
     <script src="script.js"></script>
 </body>
