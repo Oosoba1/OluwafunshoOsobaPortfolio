@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Oluwafunsho Osoba by phone, email, LinkedIn, GitHub, or the contact form below.">
     <title>Oluwafunsho Osoba | Contact</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -24,33 +26,50 @@
 
     <!-- Light / Dark mode toggle button -->
     <div class="mode-bar">
-        <button id="modeToggleBtn">Switch to Dark Mode</button>
+        <button id="modeToggleBtn" aria-pressed="false">Switch to Dark Mode</button>
     </div>
 
     <main>
         <section>
-            <h3>Send Me a Message</h3>
+            <h2>Send Me a Message</h2>
 
             <form id="contactForm" novalidate>
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
+                <input type="text" id="name" name="name" required minlength="3" aria-describedby="nameError">
                 <span class="error-message" id="nameError"></span>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" required aria-describedby="emailError">
                 <span class="error-message" id="emailError"></span>
 
                 <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject">
+                <input type="text" id="subject" name="subject" required aria-describedby="subjectError">
                 <span class="error-message" id="subjectError"></span>
 
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" cols="40"></textarea>
+                <textarea id="message" name="message" rows="5" cols="40" required minlength="20" aria-describedby="messageError"></textarea>
                 <span class="error-message" id="messageError"></span>
 
                 <input type="submit" value="Send Message">
-                <p id="formSuccessMessage"></p>
+                <p id="formSuccessMessage" role="status"></p>
             </form>
+        </section>
+
+        <section>
+            <h2>Contact Information</h2>
+
+            <p>
+                <strong>LinkedIn:</strong>
+                <a href="https://www.linkedin.com/in/oluwafunshoosoba">LinkedIn Profile</a>
+            </p>
+
+            <p>
+                <strong>GitHub:</strong>
+                <a href="https://github.com/Oosoba1">github.com/Oosoba1</a>
+            </p>
+
+            <p><strong>Email:</strong> <a href="mailto:funsho.osba@gmail.com">funsho.osba@gmail.com</a></p>
+            <p><strong>Phone:</strong> (516) 707-8318</p>
         </section>
     </main>
 
@@ -58,28 +77,16 @@
     <p id="datetime" class="datetime-display"></p>
 
     <footer>
-        <h2>Contact Information</h2>
-
         <p>
-            <strong>LinkedIn:</strong>
-            <a href="https://www.linkedin.com/in/oluwafunshoosoba">LinkedIn Profile</a>
+            <a href="https://github.com/Oosoba1" target="_blank">GitHub</a> |
+            <a href="https://www.linkedin.com/in/oluwafunshoosoba" target="_blank">LinkedIn</a> |
+            <a href="mailto:funsho.osba@gmail.com">Email Me</a>
         </p>
-
-        <p>
-            <strong>GitHub:</strong>
-            <a href="https://github.com/Oosoba1">github.com/Oosoba1</a>
-        </p>
-
-        <p><strong>Email:</strong> funsho.osba@gmail.com</p>
-        <p><strong>Phone:</strong> (516) 707-8318</p>
-
-        <hr>
-
         <p>&copy; 2026 Oluwafunsho Osoba. All rights reserved.</p>
     </footer>
 
     <!-- Back to Top button -->
-    <button id="backToTopBtn" title="Back to Top">&#8679;</button>
+    <button id="backToTopBtn" aria-label="Back to top" title="Back to Top">&#8679;</button>
 
     <script src="script.js"></script>
 </body>
