@@ -1,95 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link  rel ="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <title>Oluwafunsho Osoba | Contact</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
     <header>
-
         <h1>Contact Me</h1>
-
         <p>
             Thank you for visiting my website. If you would like to get in touch,
             please use the contact information below or complete the contact form.
         </p>
-
     </header>
 
     <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html" class="active">Contact</a>
-</nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
 
-    <hr>
+    <!-- Light / Dark mode toggle button -->
+    <div class="mode-bar">
+        <button id="modeToggleBtn">Switch to Dark Mode</button>
+    </div>
 
-    <section>
+    <main>
+        <section>
+            <h3>Send Me a Message</h3>
 
+            <form id="contactForm" novalidate>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <span class="error-message" id="nameError"></span>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <span class="error-message" id="emailError"></span>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject">
+                <span class="error-message" id="subjectError"></span>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" cols="40"></textarea>
+                <span class="error-message" id="messageError"></span>
+
+                <input type="submit" value="Send Message">
+                <p id="formSuccessMessage"></p>
+            </form>
+        </section>
+    </main>
+
+    <!-- Live date and time display -->
+    <p id="datetime" class="datetime-display"></p>
+
+    <footer>
         <h2>Contact Information</h2>
-
-        <p><strong>Email:</strong> funsho.osba@gmail.com</p>
-
-        <p><strong>Phone:</strong> (516) 707-8318</p>
 
         <p>
             <strong>LinkedIn:</strong>
-            <a href="https://www.linkedin.com/in/oluwafunshoosoba">
-                LinkedIn Profile
-            </a>
+            <a href="https://www.linkedin.com/in/oluwafunshoosoba">LinkedIn Profile</a>
         </p>
 
         <p>
             <strong>GitHub:</strong>
-            <a href="https://github.com/Oosoba1">
-                github.com/Oosoba1
-            </a>
+            <a href="https://github.com/Oosoba1">github.com/Oosoba1</a>
         </p>
 
-    </section>
-
-    <section>
-
-        <h3>Send Me a Message</h3>
-
-        <form>
-
-        <p>
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name">
-        </p>
-
-        <p>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email">
-        </p>
-
-        <p>
-            <label for="subject">Subject:</label><br>
-            <input type="text" id="subject" name="subject">
-        </p>
-
-        <p>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="5" cols="40"></textarea>
-        </p>
-
-        <input type="submit" value="Send Message">
-
-    </form>
-
-</section>
-    <footer>
+        <p><strong>Email:</strong> funsho.osba@gmail.com</p>
+        <p><strong>Phone:</strong> (516) 707-8318</p>
 
         <hr>
 
         <p>&copy; 2026 Oluwafunsho Osoba. All rights reserved.</p>
-
     </footer>
+
+    <!-- Back to Top button -->
+    <button id="backToTopBtn" title="Back to Top">&#8679;</button>
+
+    <script src="script.js"></script>
 </body>
 </html>
