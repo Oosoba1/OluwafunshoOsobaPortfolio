@@ -1,7 +1,11 @@
 # Oluwafunsho Osoba Portfolio
 
 A responsive personal portfolio website created using HTML and CSS. The website highlights my background, technical skills, projects, and contact information.
+---
+
 [preview](https://oosoba1.github.io/OluwafunshoOsobaPortfolio/)
+
+---
 
 ## Pages
 
