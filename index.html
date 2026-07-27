@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home page of Oluwafunsho Osoba's portfolio, a Management Information Systems student sharing projects and technology skills.">
     <title>Oluwafunsho Osoba</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -23,13 +25,13 @@
 
     <!-- Light / Dark mode toggle button -->
     <div class="mode-bar">
-        <button id="modeToggleBtn">Switch to Dark Mode</button>
+        <button id="modeToggleBtn" aria-pressed="false">Switch to Dark Mode</button>
     </div>
 
     <main>
         <section>
             <h2>Greetings!</h2>
-            <p><img src="Profileimage.jpeg" alt="Profile image of Oluwafunsho Osoba" width="250"></p>
+            <p><img src="Profileimage.jpeg" alt="Profile photo of Oluwafunsho Osoba" width="250"></p>
         </section>
     </main>
 
@@ -37,11 +39,16 @@
     <p id="datetime" class="datetime-display"></p>
 
     <footer>
+        <p>
+            <a href="https://github.com/Oosoba1" target="_blank">GitHub</a> |
+            <a href="https://www.linkedin.com/in/oluwafunshoosoba" target="_blank">LinkedIn</a> |
+            <a href="mailto:funsho.osba@gmail.com">Email Me</a>
+        </p>
         <p>&copy; 2026 Oluwafunsho Osoba. All rights reserved.</p>
     </footer>
 
     <!-- Back to Top button -->
-    <button id="backToTopBtn" title="Back to Top">&#8679;</button>
+    <button id="backToTopBtn" aria-label="Back to top" title="Back to Top">&#8679;</button>
 
     <script src="script.js"></script>
 </body>
