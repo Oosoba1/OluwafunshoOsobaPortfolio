@@ -47,12 +47,11 @@ const modeToggleBtn = document.getElementById("modeToggleBtn");
 if (modeToggleBtn) {
     modeToggleBtn.addEventListener("click", function () {
         document.body.classList.toggle("dark-mode");
+        const isDarkMode = document.body.classList.contains("dark-mode");
 
-        if (document.body.classList.contains("dark-mode")) {
-            modeToggleBtn.textContent = "Switch to Light Mode";
-        } else {
-            modeToggleBtn.textContent = "Switch to Dark Mode";
-        }
+        modeToggleBtn.textContent = isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode";
+        // Lets screen readers announce whether the toggle is "on" or "off"
+        modeToggleBtn.setAttribute("aria-pressed", isDarkMode);
     });
 }
 
@@ -243,8 +242,10 @@ if (contactForm) {
 const backToTopBtn = document.getElementById("backToTopBtn");
 
 if (backToTopBtn) {
+    // 100px keeps this working even on shorter pages (like Home) that
+    // don't have much room to scroll in the first place.
     window.addEventListener("scroll", function () {
-        if (window.scrollY > 300) {
+        if (window.scrollY > 100) {
             backToTopBtn.style.display = "block";
         } else {
             backToTopBtn.style.display = "none";
