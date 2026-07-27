@@ -1,3 +1,7 @@
+/* =========================================
+   Oluwafunsho Osoba - Portfolio Stylesheet
+   ========================================= */
+
 * {
     box-sizing: border-box;
 }
@@ -8,12 +12,14 @@ body {
     font-size: 18px;
     background-color: #edfafb;
     color: #222222;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header {
     text-align: center;
     padding: 25px;
     background-color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1,
@@ -62,6 +68,7 @@ section {
     padding: 20px;
     background-color: white;
     border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 img {
@@ -89,6 +96,7 @@ textarea {
     font-size: 16px;
     border: 1px solid gray;
     border-radius: 5px;
+    margin-bottom: 5px;
 }
 
 input[type="submit"] {
@@ -122,6 +130,248 @@ footer a:hover {
     color: white;
 }
 
+/* =========================================
+   Dark Mode / Light Mode Toggle
+   ========================================= */
+
+.mode-bar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    background-color: #edfafb;
+    transition: background-color 0.3s ease;
+}
+
+#modeToggleBtn {
+    background-color: rgb(26, 69, 107);
+    color: floralwhite;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#modeToggleBtn:hover {
+    background-color: khaki;
+    color: rgb(26, 69, 107);
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+    background-color: #121826;
+    color: #e6e6e6;
+}
+
+body.dark-mode header,
+body.dark-mode section,
+body.dark-mode .mode-bar {
+    background-color: #1c2536;
+    color: #e6e6e6;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5 {
+    color: khaki;
+}
+
+body.dark-mode .project-card {
+    background-color: #232e45;
+    border-color: #3a4a6b;
+    color: #e6e6e6;
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"],
+body.dark-mode textarea {
+    background-color: #2a3550;
+    color: #e6e6e6;
+    border: 1px solid #555;
+}
+
+body.dark-mode .gallery-container {
+    background-color: #1c2536;
+}
+
+/* =========================================
+   Date and Time Display
+   ========================================= */
+
+.datetime-display {
+    text-align: right;
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto 0 auto;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(26, 69, 107);
+}
+
+body.dark-mode .datetime-display {
+    color: khaki;
+}
+
+/* =========================================
+   Project Cards
+   ========================================= */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #f7fdfe;
+    border: 2px solid rgb(26, 69, 107);
+    border-radius: 8px;
+    padding: 18px;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    cursor: default;
+}
+
+.project-card:hover,
+.project-card.card-hovered {
+    transform: scale(1.03);
+    border-color: khaki;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.project-card .card-extra {
+    display: none;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed rgb(26, 69, 107);
+    font-size: 15px;
+}
+
+.project-card.card-hovered .card-extra {
+    display: block;
+}
+
+.project-card ul {
+    margin: 8px 0;
+    padding-left: 20px;
+}
+
+.hidden-project {
+    display: none;
+}
+
+#showMoreBtn {
+    display: block;
+    margin: 25px auto 0 auto;
+    background-color: rgb(26, 69, 107);
+    color: floralwhite;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#showMoreBtn:hover {
+    background-color: khaki;
+    color: rgb(26, 69, 107);
+}
+
+/* =========================================
+   Image Gallery
+   ========================================= */
+
+.gallery-container {
+    text-align: center;
+    background-color: #f7fdfe;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.gallery-image-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.gallery-image-wrapper img {
+    width: 100%;
+    border: 2px solid rgb(26, 69, 107);
+}
+
+.gallery-caption {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.gallery-controls {
+    margin-top: 15px;
+}
+
+.gallery-controls button {
+    background-color: rgb(26, 69, 107);
+    color: floralwhite;
+    border: none;
+    padding: 10px 18px;
+    margin: 0 8px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.gallery-controls button:hover {
+    background-color: khaki;
+    color: rgb(26, 69, 107);
+}
+
+/* =========================================
+   Contact Form Validation
+   ========================================= */
+
+.error-message {
+    color: #c0392b;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    min-height: 18px;
+    margin-bottom: 8px;
+}
+
+.form-success {
+    color: #1a7a3c;
+    font-weight: bold;
+}
+
+/* =========================================
+   Back to Top Button
+   ========================================= */
+
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: rgb(26, 69, 107);
+    color: floralwhite;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+#backToTopBtn:hover {
+    background-color: khaki;
+    color: rgb(26, 69, 107);
+}
+
+/* =========================================
+   Responsive
+   ========================================= */
+
 @media screen and (max-width: 768px) {
     body {
         font-size: 16px;
@@ -141,5 +391,13 @@ footer a:hover {
 
     input[type="submit"] {
         width: 100%;
+    }
+
+    .mode-bar {
+        justify-content: center;
+    }
+
+    .datetime-display {
+        text-align: center;
     }
 }
