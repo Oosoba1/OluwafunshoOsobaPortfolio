@@ -1,35 +1,48 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link  rel ="stylesheet" href="style.css">
-        <meta charset="UTF-8">
-        <title>Oluwafunsho Osoba</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Oluwafunsho Osoba</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <body>
-        <header>
-            <h1>Welcome to My Website</h1>
-            <p>Welcome to my website! Thank you for stopping by. 
-                This website is where I'll share my journey of the projects I'm created and the skills I'm learning as I continue to grow in technology. 
-                I hope you enjoy your visit!</p>
-        </header>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <p>Welcome to my website! Thank you for stopping by.
+            This website is where I'll share my journey of the projects I've created and the skills I'm learning as I continue to grow in technology.
+            I hope you enjoy your visit!</p>
+    </header>
 
-        <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About Me</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact Me</a>
-        </nav>
-        <main>
-            <section>
-                <h2>Greetings!</h2>
-                <p> <img src="Profileimage.jpeg" alt="Profileimage" width="250"></p>
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact Me</a>
+    </nav>
 
-            </section>
-        </main>
+    <!-- Light / Dark mode toggle button -->
+    <div class="mode-bar">
+        <button id="modeToggleBtn">Switch to Dark Mode</button>
+    </div>
 
-        <footer>
-            <p>&copy; 2026 Oluwafunsho Osoba. All rights reserved.</p>
-        </footer>
-    </body>
+    <main>
+        <section>
+            <h2>Greetings!</h2>
+            <p><img src="Profileimage.jpeg" alt="Profile image of Oluwafunsho Osoba" width="250"></p>
+        </section>
+    </main>
+
+    <!-- Live date and time display -->
+    <p id="datetime" class="datetime-display"></p>
+
+    <footer>
+        <p>&copy; 2026 Oluwafunsho Osoba. All rights reserved.</p>
+    </footer>
+
+    <!-- Back to Top button -->
+    <button id="backToTopBtn" title="Back to Top">&#8679;</button>
+
+    <script src="script.js"></script>
+</body>
 </html>
