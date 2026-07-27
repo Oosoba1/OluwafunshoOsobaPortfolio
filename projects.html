@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A showcase of Oluwafunsho Osoba's software projects, including MovieMax AI and Mario, Luigi & Deltarune.">
     <title>Oluwafunsho Osoba | Projects</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -26,18 +28,18 @@
 
     <!-- Light / Dark mode toggle button -->
     <div class="mode-bar">
-        <button id="modeToggleBtn">Switch to Dark Mode</button>
+        <button id="modeToggleBtn" aria-pressed="false">Switch to Dark Mode</button>
     </div>
 
     <main>
         <section>
             <h2>My Work</h2>
-            <p>Hover over a project card to see more details about the tools used and the project timeline.</p>
+            <p>Hover over a project card (or tab to it with your keyboard) to see more details about the tools used and the project timeline.</p>
 
             <div class="projects-grid">
 
                 <!-- Project 1 -->
-                <div class="project-card">
+                <div class="project-card" tabindex="0">
                     <h3>Project 1: MovieMax AI</h3>
                     <p><strong>Description:</strong> MovieMax AI is a full-stack web application that allows
                         users to search for movies using natural language instead of traditional keyword
@@ -63,7 +65,7 @@
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card">
+                <div class="project-card" tabindex="0">
                     <h3>Project 2: Mario, Luigi &amp; Deltarune</h3>
                     <p><strong>Description:</strong> Mario, Luigi &amp; Deltarune is a game-inspired programming
                         project that demonstrates object-oriented programming principles through interactive
@@ -88,7 +90,7 @@
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-card">
+                <div class="project-card" tabindex="0">
                     <h3>Project 3: [Add Project Title]</h3>
                     <p><strong>Description:</strong> [Replace this text with a short description of your project.]</p>
 
@@ -107,7 +109,7 @@
                 </div>
 
                 <!-- Project 4 - hidden until "Show More" is clicked -->
-                <div class="project-card hidden-project">
+                <div class="project-card hidden-project" tabindex="0">
                     <h3>Project 4: [Add Project Title]</h3>
                     <p><strong>Description:</strong> [Replace this text with a short description of your project.]</p>
 
@@ -126,7 +128,7 @@
                 </div>
 
                 <!-- Project 5 - hidden until "Show More" is clicked -->
-                <div class="project-card hidden-project">
+                <div class="project-card hidden-project" tabindex="0">
                     <h3>Project 5: [Add Project Title]</h3>
                     <p><strong>Description:</strong> [Replace this text with a short description of your project.]</p>
 
@@ -145,7 +147,7 @@
                 </div>
 
                 <!-- Project 6 - hidden until "Show More" is clicked -->
-                <div class="project-card hidden-project">
+                <div class="project-card hidden-project" tabindex="0">
                     <h3>Project 6: [Add Project Title]</h3>
                     <p><strong>Description:</strong> [Replace this text with a short description of your project.]</p>
 
@@ -191,17 +193,16 @@
     <p id="datetime" class="datetime-display"></p>
 
     <footer>
-        <hr>
-        <p>&copy; 2026 Oluwafunsho Osoba. All rights reserved.</p>
-        <p>Email: funsho.osba@gmail.com</p>
         <p>
             <a href="https://github.com/Oosoba1" target="_blank">GitHub</a> |
-            <a href="https://www.linkedin.com/in/oluwafunshoosoba" target="_blank">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/oluwafunshoosoba" target="_blank">LinkedIn</a> |
+            <a href="mailto:funsho.osba@gmail.com">Email Me</a>
         </p>
+        <p>&copy; 2026 Oluwafunsho Osoba. All rights reserved.</p>
     </footer>
 
     <!-- Back to Top button -->
-    <button id="backToTopBtn" title="Back to Top">&#8679;</button>
+    <button id="backToTopBtn" aria-label="Back to top" title="Back to Top">&#8679;</button>
 
     <script src="script.js"></script>
 </body>
