@@ -43,7 +43,7 @@ setInterval(updateDateTime, 1000);
   */
 const modeToggleBtn = document.getElementById("modeToggleBtn");
 
-if (modeToggleBtn) 
+if (modeToggleBtn) {
     modeToggleBtn.addEventListener("click", function () {
         document.body.classList.toggle("dark-mode");
         const isDarkMode = document.body.classList.contains("dark-mode");
@@ -52,7 +52,8 @@ if (modeToggleBtn)
        
         modeToggleBtn.setAttribute("aria-pressed", isDarkMode);
     });
-}
+    });
+
 
 /*
    When the mouse enters a card it grows , changes
