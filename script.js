@@ -1,7 +1,7 @@
 /* ==========================================================
    Oluwafunsho Osoba - Portfolio Website
    script.js
-   This file holds all the JavaScript for the site:
+   
    1. Live date/time clock
    2. Light/Dark mode toggle
    3. Interactive project cards (mouseover / mouseout)
@@ -20,7 +20,7 @@
 function updateDateTime() {
     const datetimeElement = document.getElementById("datetime");
 
-    // Only run this if the current page actually has the element
+  
     if (datetimeElement) {
         const now = new Date();
         const dateOptions = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
@@ -31,7 +31,7 @@ function updateDateTime() {
     }
 }
 
-// Run once right away so there is no blank spot while waiting for the timer
+
 updateDateTime();
 // Then update every 1000ms (1 second)
 setInterval(updateDateTime, 1000);
@@ -167,13 +167,12 @@ if (contactForm) {
         const subjectField = document.getElementById("subject");
         const messageField = document.getElementById("message");
 
-        // Grab the spots where error messages will be shown
+        //  error messages will be shown
         const nameError = document.getElementById("nameError");
         const emailError = document.getElementById("emailError");
         const subjectError = document.getElementById("subjectError");
         const messageError = document.getElementById("messageError");
 
-        // Clear old error messages first
         nameError.textContent = "";
         emailError.textContent = "";
         subjectError.textContent = "";
@@ -202,16 +201,14 @@ if (contactForm) {
             formIsValid = false;
         }
 
-        // ----- Subject validation -----
-        // Cannot be empty
+    
         const subjectValue = subjectField.value.trim();
         if (subjectValue === "") {
             subjectError.textContent = "Subject is required.";
             formIsValid = false;
         }
 
-        // ----- Message validation -----
-        // Cannot be empty, minimum 20 characters
+       
         const messageValue = messageField.value.trim();
         if (messageValue === "") {
             messageError.textContent = "Message is required.";
