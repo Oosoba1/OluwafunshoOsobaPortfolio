@@ -1,4 +1,4 @@
-/* ==========================================================
+/* 
    Oluwafunsho Osoba - Portfolio Website
    script.js
    
@@ -8,15 +8,14 @@
    4. Show More / Show Less projects button
    5. Image gallery (next / previous + auto rotate)
    6. Contact form validation
-   7. Back to Top button
-   ========================================================== */
+   7. Back to Top button */
 
 
-/* ----------------------------------------------------------
-   1. LIVE DATE / TIME CLOCK
+/*
+     TIME CLOCK
    Updates the text of the element with id="datetime"
    every second so the visitor always sees the current time.
-   ---------------------------------------------------------- */
+   */
 function updateDateTime() {
     const datetimeElement = document.getElementById("datetime");
 
@@ -33,15 +32,15 @@ function updateDateTime() {
 
 
 updateDateTime();
-// Then update every 1000ms (1 second)
+
 setInterval(updateDateTime, 1000);
 
 
-/* ----------------------------------------------------------
+/* 
    2. LIGHT MODE / DARK MODE TOGGLE
    Clicking the button adds or removes the "dark-mode" class
    on the body and swaps the button text.
-   ---------------------------------------------------------- */
+  */
 const modeToggleBtn = document.getElementById("modeToggleBtn");
 
 if (modeToggleBtn) {
@@ -55,13 +54,11 @@ if (modeToggleBtn) {
     });
 }
 
-
-/* ----------------------------------------------------------
-   3. INTERACTIVE PROJECT CARDS
+/*
    When the mouse enters a card it grows slightly, changes
    border color, and reveals extra project info. When the
    mouse leaves, the card returns to normal.
-   ---------------------------------------------------------- */
+    */
 const projectCards = document.querySelectorAll(".project-card");
 
 projectCards.forEach(function (card) {
@@ -73,12 +70,9 @@ projectCards.forEach(function (card) {
         card.classList.remove("card-hovered");
     });
 });
-/* ----------------------------------------------------------
-   5. IMAGE GALLERY
-   Cycles through an array of project screenshots. Users can
-   click Next / Previous, and the gallery also auto-advances
-   every 5 seconds.
-   ---------------------------------------------------------- */
+/*
+ click Next / Previous, and the gallery also auto-advances
+ */
 const galleryImages = [
     { src: "./gallery2.jpg", caption: "MovieMax AI - Search Results Page" },
     { src: "./gallery3.jpg", caption: "MovieMax AI - AI Search in Action" },
@@ -120,12 +114,9 @@ if (galleryImageEl) {
 }
 
 
-/* ----------------------------------------------------------
-   6. CONTACT FORM VALIDATION
-   Checks every field before the form is allowed to submit.
-   If a field fails validation, an error message is shown
-   next to that field and the form submission is stopped.
-   ---------------------------------------------------------- */
+/* 
+    CONTACT FORM VALIDATION
+    */
 const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
@@ -151,8 +142,7 @@ if (contactForm) {
         subjectError.textContent = "";
         messageError.textContent = "";
 
-        // ----- Name validation -----
-        // Cannot be empty, minimum 3 characters
+        // Cannot be empty minimum 3 characters
         const nameValue = nameField.value.trim();
         if (nameValue === "") {
             nameError.textContent = "Name is required.";
@@ -162,7 +152,7 @@ if (contactForm) {
             formIsValid = false;
         }
 
-        // ----- Email validation -----
+       
         // Cannot be empty, must be a valid email format
         const emailValue = emailField.value.trim();
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -191,7 +181,7 @@ if (contactForm) {
             formIsValid = false;
         }
 
-        // If everything passed, show a success message and reset the form
+        //  show a success message and reset the form
         const successMessage = document.getElementById("formSuccessMessage");
         if (formIsValid) {
             successMessage.textContent = "Thank you! Your message has been sent.";
@@ -204,16 +194,12 @@ if (contactForm) {
 }
 
 
-/* ----------------------------------------------------------
-   7. BACK TO TOP BUTTON
-   The button is hidden until the user scrolls down 300px.
-   Clicking it smoothly scrolls the page back to the top.
-   ---------------------------------------------------------- */
+/* 
+ BACK TO TOP BUTTON
+   */
 const backToTopBtn = document.getElementById("backToTopBtn");
 
-if (backToTopBtn) {
-    // 100px keeps this working even on shorter pages (like Home) that
-    // don't have much room to scroll in the first place.
+if (backToTopBtn) 
     window.addEventListener("scroll", function () {
         if (window.scrollY > 100) {
             backToTopBtn.style.display = "block";
