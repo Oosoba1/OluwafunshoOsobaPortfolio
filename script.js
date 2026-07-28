@@ -105,10 +105,8 @@ if (showMoreBtn) {
    every 5 seconds.
    ---------------------------------------------------------- */
 const galleryImages = [
-    { src: "images/gallery1.jpg", caption: "MovieMax AI - Search Results Page" },
-    { src: "images/gallery2.jpg", caption: "MovieMax AI - AI Search in Action" },
-    { src: "images/gallery3.jpg", caption: "Mario, Luigi & Deltarune - Gameplay Screen" },
-    { src: "images/gallery4.jpg", caption: "Mario, Luigi & Deltarune - Character Select" }
+    { src: "/.gallery3.jpg", caption: "MovieMax AI - Search Results Page" },
+    { src: "./gallery3.jpg", caption: "MovieMax AI - AI Search in Action" },
 ];
 
 let currentImageIndex = 0;
