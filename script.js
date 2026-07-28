@@ -19,10 +19,15 @@
 function updateDateTime() {
     const datetimeElement = document.getElementById("datetime");
 
-  
     if (datetimeElement) {
         const now = new Date();
-        const dateOptions = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
+        const dateOptions = {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        };
+
         const formattedDate = now.toLocaleDateString(undefined, dateOptions);
         const formattedTime = now.toLocaleTimeString();
 
@@ -46,13 +51,16 @@ const modeToggleBtn = document.getElementById("modeToggleBtn");
 if (modeToggleBtn) {
     modeToggleBtn.addEventListener("click", function () {
         document.body.classList.toggle("dark-mode");
+
         const isDarkMode = document.body.classList.contains("dark-mode");
 
-        modeToggleBtn.textContent = isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode";
-       
+        modeToggleBtn.textContent = isDarkMode
+            ? "Switch to Light Mode"
+            : "Switch to Dark Mode";
+
         modeToggleBtn.setAttribute("aria-pressed", isDarkMode);
     });
-    });
+}
 
 
 /*
@@ -71,15 +79,49 @@ projectCards.forEach(function (card) {
         card.classList.remove("card-hovered");
     });
 });
+
+
+/*
+   SHOW MORE / SHOW LESS PROJECTS BUTTON
+   Initially hides the additional projects. Clicking the
+   button displays or hides the additional projects.
+   */
+const showMoreProjectsBtn = document.getElementById("showMoreProjectsBtn");
+const hiddenProjects = document.querySelectorAll(".hidden-project");
+
+if (showMoreProjectsBtn) {
+    showMoreProjectsBtn.addEventListener("click", function () {
+        const projectsAreHidden =
+            hiddenProjects.length > 0 &&
+            hiddenProjects[0].classList.contains("hidden-project");
+
+        hiddenProjects.forEach(function (project) {
+            project.classList.toggle("hidden-project");
+        });
+
+        showMoreProjectsBtn.textContent = projectsAreHidden
+            ? "Show Less Projects"
+            : "Show More Projects";
+    });
+}
+
+
 /*
  click Next / Previous, and the gallery also auto-advances
  */
 const galleryImages = [
-    { src: "./gallery2.jpg", caption: "MovieMax AI - Search Results Page" },
-    { src: "./gallery3.jpg", caption: "MovieMax AI - AI Search in Action" },
+    {
+        src: "./gallery2.jpg",
+        caption: "MovieMax AI - Search Results Page"
+    },
+    {
+        src: "./gallery3.jpg",
+        caption: "MovieMax AI - AI Search in Action"
+    }
 ];
 
 let currentImageIndex = 0;
+
 const galleryImageEl = document.getElementById("galleryImage");
 const galleryCaptionEl = document.getElementById("galleryCaption");
 const nextBtn = document.getElementById("nextImageBtn");
@@ -93,23 +135,34 @@ function showGalleryImage(index) {
     }
 }
 
-if (galleryImageEl) {
+if (galleryImageEl && galleryCaptionEl) {
     // Show the first image right away
     showGalleryImage(currentImageIndex);
 
-    nextBtn.addEventListener("click", function () {
-        currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
-        showGalleryImage(currentImageIndex);
-    });
+    if (nextBtn) {
+        nextBtn.addEventListener("click", function () {
+            currentImageIndex =
+                (currentImageIndex + 1) % galleryImages.length;
 
-    prevBtn.addEventListener("click", function () {
-        currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
-        showGalleryImage(currentImageIndex);
-    });
+            showGalleryImage(currentImageIndex);
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener("click", function () {
+            currentImageIndex =
+                (currentImageIndex - 1 + galleryImages.length) %
+                galleryImages.length;
+
+            showGalleryImage(currentImageIndex);
+        });
+    }
 
     // Auto-advance the gallery every 5 seconds
     setInterval(function () {
-        currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+        currentImageIndex =
+            (currentImageIndex + 1) % galleryImages.length;
+
         showGalleryImage(currentImageIndex);
     }, 5000);
 }
@@ -145,47 +198,58 @@ if (contactForm) {
 
         // Cannot be empty minimum 3 characters
         const nameValue = nameField.value.trim();
+
         if (nameValue === "") {
             nameError.textContent = "Name is required.";
             formIsValid = false;
         } else if (nameValue.length < 3) {
-            nameError.textContent = "Name must be at least 3 characters.";
+            nameError.textContent =
+                "Name must be at least 3 characters.";
+
             formIsValid = false;
         }
 
-       
         // Cannot be empty, must be a valid email format
         const emailValue = emailField.value.trim();
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
         if (emailValue === "") {
             emailError.textContent = "Email is required.";
             formIsValid = false;
         } else if (!emailPattern.test(emailValue)) {
-            emailError.textContent = "Please enter a valid email address.";
+            emailError.textContent =
+                "Please enter a valid email address.";
+
             formIsValid = false;
         }
 
-    
         const subjectValue = subjectField.value.trim();
+
         if (subjectValue === "") {
             subjectError.textContent = "Subject is required.";
             formIsValid = false;
         }
 
-       
         const messageValue = messageField.value.trim();
+
         if (messageValue === "") {
             messageError.textContent = "Message is required.";
             formIsValid = false;
         } else if (messageValue.length < 20) {
-            messageError.textContent = "Message must be at least 20 characters.";
+            messageError.textContent =
+                "Message must be at least 20 characters.";
+
             formIsValid = false;
         }
 
         //  show a success message and reset the form
-        const successMessage = document.getElementById("formSuccessMessage");
+        const successMessage =
+            document.getElementById("formSuccessMessage");
+
         if (formIsValid) {
-            successMessage.textContent = "Thank you! Your message has been sent.";
+            successMessage.textContent =
+                "Thank you! Your message has been sent.";
+
             successMessage.classList.add("form-success");
             contactForm.reset();
         } else {
@@ -210,6 +274,9 @@ if (backToTopBtn) {
     });
 
     backToTopBtn.addEventListener("click", function () {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     });
 }
