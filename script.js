@@ -200,7 +200,7 @@ if (contactForm) {
    */
 const backToTopBtn = document.getElementById("backToTopBtn");
 
-if (backToTopBtn) 
+if (backToTopBtn) {
     window.addEventListener("scroll", function () {
         if (window.scrollY > 100) {
             backToTopBtn.style.display = "block";
