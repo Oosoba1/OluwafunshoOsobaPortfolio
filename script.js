@@ -49,7 +49,7 @@ if (modeToggleBtn) {
         const isDarkMode = document.body.classList.contains("dark-mode");
 
         modeToggleBtn.textContent = isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode";
-        // Lets screen readers announce whether the toggle is "on" or "off"
+       
         modeToggleBtn.setAttribute("aria-pressed", isDarkMode);
     });
 }
