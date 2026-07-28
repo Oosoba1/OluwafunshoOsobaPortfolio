@@ -105,7 +105,7 @@ if (showMoreBtn) {
    every 5 seconds.
    ---------------------------------------------------------- */
 const galleryImages = [
-    { src: "/.gallery2.jpg", caption: "MovieMax AI - Search Results Page" },
+    { src: "./gallery2.jpg", caption: "MovieMax AI - Search Results Page" },
     { src: "./gallery3.jpg", caption: "MovieMax AI - AI Search in Action" },
 ];
 
