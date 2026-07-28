@@ -43,7 +43,7 @@ setInterval(updateDateTime, 1000);
   */
 const modeToggleBtn = document.getElementById("modeToggleBtn");
 
-if (modeToggleBtn) {
+if (modeToggleBtn) 
     modeToggleBtn.addEventListener("click", function () {
         document.body.classList.toggle("dark-mode");
         const isDarkMode = document.body.classList.contains("dark-mode");
@@ -55,7 +55,7 @@ if (modeToggleBtn) {
 }
 
 /*
-   When the mouse enters a card it grows slightly, changes
+   When the mouse enters a card it grows , changes
    border color, and reveals extra project info. When the
    mouse leaves, the card returns to normal.
     */
