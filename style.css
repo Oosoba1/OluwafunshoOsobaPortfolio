@@ -1,9 +1,4 @@
-/* =========================================
-   Oluwafunsho Osoba - Portfolio Stylesheet
-   Uses CSS custom properties (variables) so
-   the whole site's colors stay consistent and
-   Light/Dark mode only has to be defined once.
-   ========================================= */
+
 
 :root {
     --color-primary: rgb(26, 69, 107);
