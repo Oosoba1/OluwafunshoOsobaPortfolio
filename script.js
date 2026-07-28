@@ -73,31 +73,6 @@ projectCards.forEach(function (card) {
         card.classList.remove("card-hovered");
     });
 });
-
-
-/* ----------------------------------------------------------
-   4. SHOW MORE / SHOW LESS PROJECTS BUTTON
-   The first 3 project cards are always visible. The rest
-   have the class "hidden-project" and start hidden. Clicking
-   the button reveals or hides them and swaps the button text.
-   ---------------------------------------------------------- */
-const showMoreBtn = document.getElementById("showMoreBtn");
-const hiddenProjects = document.querySelectorAll(".hidden-project");
-
-if (showMoreBtn) {
-    showMoreBtn.addEventListener("click", function () {
-        // Check the current state by looking at the first hidden project
-        const isHidden = hiddenProjects[0].style.display === "none" || hiddenProjects[0].style.display === "";
-
-        hiddenProjects.forEach(function (project) {
-            project.style.display = isHidden ? "block" : "none";
-        });
-
-        showMoreBtn.textContent = isHidden ? "Show Less Projects" : "Show More Projects";
-    });
-}
-
-
 /* ----------------------------------------------------------
    5. IMAGE GALLERY
    Cycles through an array of project screenshots. Users can
